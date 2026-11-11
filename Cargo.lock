@@ -1203,10 +1203,12 @@ dependencies = [
  "clap",
  "console-subscriber",
  "cosmic-launch",
+ "cosmic-launcher-config",
  "futures",
  "i18n-embed",
  "i18n-embed-fl",
  "libcosmic",
+ "log",
  "nix",
  "pop-launcher",
  "pop-launcher-service",
@@ -1220,6 +1222,17 @@ dependencies = [
  "tracing-subscriber",
  "xdgen",
  "zbus 6.2.1",
+]
+
+[[package]]
+name = "cosmic-launcher-config"
+version = "1.11.0"
+dependencies = [
+ "cosmic-config",
+ "libcosmic",
+ "log",
+ "pop-launcher",
+ "serde",
 ]
 
 [[package]]
@@ -4394,7 +4407,7 @@ dependencies = [
 [[package]]
 name = "pop-launcher"
 version = "1.2.7"
-source = "git+https://github.com/pop-os/launcher/#4111617b7345134abe67332a7baa5ef12538f412"
+source = "git+https://github.com/avnyu/launcher/?branch=config#db1f194ea71ff985cd0c2552c754fb9f3b075f2c"
 dependencies = [
  "const_format",
  "dirs",
@@ -4409,7 +4422,7 @@ dependencies = [
 [[package]]
 name = "pop-launcher-service"
 version = "1.2.7"
-source = "git+https://github.com/pop-os/launcher/#4111617b7345134abe67332a7baa5ef12538f412"
+source = "git+https://github.com/avnyu/launcher/?branch=config#db1f194ea71ff985cd0c2552c754fb9f3b075f2c"
 dependencies = [
  "async-oneshot",
  "async-trait",
